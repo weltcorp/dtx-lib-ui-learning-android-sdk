@@ -1,3 +1,5 @@
+define: &version 0.0.8
+
 install: 
   - FILE="-Dfile=ui-learning.aar"
-  - mvn install:install-file $FILE -DgroupId=com.weltcorp.dtx.lib.learning -DartifactId=ui-learning -Dversion=0.0.7 -Dpackaging=aar -DgeneratePom=true
+  - mvn install:install-file $FILE -DgroupId=com.weltcorp.dtx.lib.learning -DartifactId=ui-learning -Dversion=*version -Dpackaging=aar -DgeneratePom=true
