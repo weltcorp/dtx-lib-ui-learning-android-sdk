@@ -49,14 +49,17 @@ class YourCustomApplication: Application() {
 
         try {
             // Initialize the Learning SDK
-            WeltDtxLearning.init(application = this, env = ENV, projectId = PROJECT_ID)
+            WeltDtxLearning.init(
+                application = this,
+                env = BuildConfig.BUILD_ENV, // Set in build.gradle(:app)
+                projectId = PROJECT_ID
+            )
         } catch (e: Exception) {
             e.printStackTrace()
         }
     }
 }
 ```
-
 
 ### - Open LearningLesson
 
@@ -70,11 +73,10 @@ Open learning contents page with lesson_id.
         routeName = "learning-pages",
         lessonId = LESSON_ID
         userId = USER_ID
-        token = ACCESS_TOKEN_HEADER
+        token = ACCESS_TOKEN_API_HEADER
     )
 }
 ```
-
 
 ## License
 
