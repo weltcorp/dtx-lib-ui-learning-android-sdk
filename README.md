@@ -70,6 +70,11 @@ Open learning contents page with lesson_id.
     // Open the Learning contents page
     WeltDtxLearning.openLearningLesson(
         YOUR_ACTIVITY as ComponentActivity,
+        onCompleteLessonListener = object : OnCompleteLessonListener {
+            override fun onComplete() {
+                // Do something when user complete the lesson
+            }
+        },
         routeName = "learning-pages",
         lessonId = LESSON_ID
         userId = USER_ID
