@@ -78,7 +78,7 @@ Open learning contents page with lesson_id.
         routeName = "learning-pages",
         lessonId = LESSON_ID
         userId = USER_ID
-        token = ACCESS_TOKEN_API_HEADER
+        token = APP_CREDENTIAL_TOKEN
     )
 }
 ```
