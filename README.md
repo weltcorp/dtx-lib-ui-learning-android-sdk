@@ -52,7 +52,9 @@ class YourCustomApplication: Application() {
             WeltDtxLearning.init(
                 application = this,
                 env = BuildConfig.BUILD_ENV, // Set in build.gradle(:app)
-                projectId = PROJECT_ID
+                appToken = "APP_TOKEN",
+                serviceName = "SERVICE_NAME",
+                projectId = "APP_PROJECT_ID",
             )
         } catch (e: Exception) {
             e.printStackTrace()
@@ -69,16 +71,14 @@ Open learning contents page with lesson_id.
 {
     // Open the Learning contents page
     WeltDtxLearning.openLearningLesson(
-        YOUR_ACTIVITY as ComponentActivity,
         onCompleteLessonListener = object : OnCompleteLessonListener {
             override fun onComplete() {
                 // Do something when user complete the lesson
             }
         },
         routeName = "learning-pages",
-        lessonId = LESSON_ID
-        userId = USER_ID
-        token = APP_CREDENTIAL_TOKEN
+        lessonId = LESSON_ID,
+        userId = USER_ID,
     )
 }
 ```
